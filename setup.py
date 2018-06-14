@@ -12,7 +12,7 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = 'mixin_py'
+NAME = 'mixinpy'
 DESCRIPTION = 'the python version api of mixin network'
 URL = 'https://github.com/wujiyu115/mixin_py'
 EMAIL = 'wujiyu115@gmail.com'
@@ -105,6 +105,7 @@ setup(
     # },
     install_requires=REQUIRED,
     include_package_data=True,
+    platforms="any",
     license='MIT',
     classifiers=[
         # Trove classifiers
@@ -120,4 +121,6 @@ setup(
     cmdclass={
         'upload': UploadCommand,
     },
+    package_dir={'': NAME}
+
 )
